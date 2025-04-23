@@ -1,0 +1,17 @@
+import Link from 'next/link';
+
+export default function Header() {
+  return (
+    <header className="bg-white dark:bg-gray-900 shadow-md">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <Link href="/" className="text-2xl font-bold text-gray-800 dark:text-white">Xuan Mei</Link>
+        <nav className="space-x-6">
+          <Link href="/about" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">About</Link>
+          <Link href="/contact" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">Contact</Link>
+          <a href="[Your-GitHub]" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white" target="_blank">GitHub</a>
+          <a href="[Your-LinkedIn]" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white" target="_blank">LinkedIn</a>
+        </nav>
+      </div>
+    </header>
+  );
+}
