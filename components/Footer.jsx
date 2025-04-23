@@ -6,12 +6,10 @@ export default function Footer() {
           © 2023 Xuan Mei
         </p>
         <div className="flex space-x-4">
-          <a href="[Your-GitHub]" className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white">
-            GitHub
-          </a>
-          <a href="[Your-LinkedIn]" className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white">
-            LinkedIn
-          </a>
+        <a href="/about" className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white">About</a>
+        <a href="/contact" className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white">Contact</a>
+          <a href="[Your-GitHub]" className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white">GitHub</a>
+          <a href="[Your-LinkedIn]" className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white">LinkedIn</a>
         </div>
       </div>
     </footer>
