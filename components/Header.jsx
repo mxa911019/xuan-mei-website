@@ -8,7 +8,7 @@ export default function Header() {
         <nav className="space-x-6">
           <Link href="/about" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">About</Link>
           <Link href="/contact" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">Contact</Link>
-          <a href="[Your-GitHub]" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white" target="_blank">GitHub</a>
+          <a href="https://scholar.google.com/citations?user=anUzZQ0AAAAJ&hl=en" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white" target="_blank">Google Scholar</a>
           <a href="[Your-LinkedIn]" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white" target="_blank">LinkedIn</a>
         </nav>
       </div>
