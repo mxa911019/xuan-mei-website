@@ -13,7 +13,7 @@ export default function Hero() {
           Hello, I'm Xuan Mei
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400">
-          Researcher 
+        Hello, I'm Xuan Mei 
         </p>
       </div>
     </motion.section>
