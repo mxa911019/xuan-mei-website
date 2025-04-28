@@ -9,7 +9,7 @@ export default function Footer() {
         <a href="/about" className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white">About</a>
         <a href="/contact" className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white">Contact</a>
           <a href="https://scholar.google.com/citations?user=anUzZQ0AAAAJ&hl=en" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white" target="_blank">Google Scholar</a>
-          <a href="[Your-LinkedIn]" className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/xuan-mei-9a099021b" className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white">LinkedIn</a>
         </div>
       </div>
     </footer>
