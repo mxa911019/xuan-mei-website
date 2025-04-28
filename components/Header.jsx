@@ -6,8 +6,8 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold text-gray-800 dark:text-white">Xuan Mei</Link>
         <nav className="space-x-6">
-          <Link href="/about" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">About</Link>
-          <Link href="/contact" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">Contact</Link>
+          <Link href="/about" className="relative text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 before:bg-black dark:before:bg-white hover:before:w-full before:transition-all before:duration-300">About</Link>
+          <Link href="/contact" className="relative text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 before:bg-black dark:before:bg-white hover:before:w-full before:transition-all before:duration-300">Contact</Link>
           <a href="https://scholar.google.com/citations?user=anUzZQ0AAAAJ&hl=en" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white" target="_blank">Google Scholar</a>
           <a href="[Your-LinkedIn]" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white" target="_blank">LinkedIn</a>
         </nav>
