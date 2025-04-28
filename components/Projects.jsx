@@ -6,11 +6,11 @@ const projects = [
   // Add your projects here
 ];
 
-export default function Projects() {
+export default function NewsUpdates() {
   return (
     <section className="py-20 px-4 dark:bg-gray-900">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 dark:text-white">Projects</h2>
+        <h2 className="text-3xl font-bold mb-12 dark:text-white">News & Updates</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
