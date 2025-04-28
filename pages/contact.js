@@ -9,7 +9,7 @@ export default function Contact() {
       </p>
       <ul className="space-y-2">
         <li>Email: <a href="mxajim@gmail.com" className="text-blue-500 hover:underline">mxajim@gmail.com</a></li>
-        <li>LinkedIn: <a href="www.linkedin.com/in/xuan-mei-9a099021b" target="_blank" className="text-blue-500 hover:underline">www.linkedin.com/in/xuan-mei-9a099021b</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/xuan-mei-9a099021b" target="_blank" className="text-blue-500 hover:underline">https://www.linkedin.com/in/xuan-mei-9a099021b</a></li>
       </ul>
       <Link href="/" className="text-blue-500 hover:underline mt-8 inline-block">← Back to Home</Link>
     </div>
