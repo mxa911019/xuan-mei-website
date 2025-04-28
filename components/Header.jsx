@@ -5,12 +5,15 @@ export default function Header() {
     <header className="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold text-gray-800 dark:text-white">Xuan Mei</Link>
-        <nav className="space-x-6">
-          <Link href="/about" className="relative text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 before:bg-black dark:before:bg-white hover:before:w-full before:transition-all before:duration-300">About</Link>
-          <Link href="/contact" className="relative text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 before:bg-black dark:before:bg-white hover:before:w-full before:transition-all before:duration-300">Contact</Link>
-          <a href="https://scholar.google.com/citations?user=anUzZQ0AAAAJ&hl=en" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white" target="_blank">Google Scholar</a>
-          <a href="[Your-LinkedIn]" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white" target="_blank">LinkedIn</a>
-        </nav>
+        <nav className="space-x-6 flex items-center">
+  <Link href="/" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">Home</Link>
+  <Link href="/about" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">About</Link>
+  <Link href="/research" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">Research</Link>
+  <Link href="/publications" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">Publications</Link>
+  <Link href="/photo-video" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">Photo & Video</Link>
+  <Link href="/contact" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">Contact</Link>
+</nav>
+
       </div>
     </header>
   );
