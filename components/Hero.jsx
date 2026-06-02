@@ -21,7 +21,7 @@ export default function Hero() {
         className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[1.2fr_0.8fr]"
       >
         <div>
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-blue-700 dark:text-blue-300">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.08em] text-blue-700 dark:text-blue-300 sm:text-sm md:whitespace-nowrap lg:text-base">
             Biomedical Engineering · Biofabrication · Translational Biomaterials
           </p>
           <h1 className="max-w-4xl text-5xl font-bold tracking-tight text-slate-950 dark:text-white md:text-7xl">
