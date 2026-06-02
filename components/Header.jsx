@@ -1,19 +1,32 @@
 import Link from 'next/link';
 
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/research', label: 'Research' },
+  { href: '/publications', label: 'Publications' },
+  { href: '/photo-video', label: 'Photo & Video' },
+  { href: '/contact', label: 'Contact' },
+];
+
 export default function Header() {
   return (
-    <header className="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-gray-800 dark:text-white">Xuan Mei</Link>
-        <nav className="space-x-6 flex items-center">
-  <Link href="/" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">Home</Link>
-  <Link href="/about" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">About</Link>
-  <Link href="/research" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">Research</Link>
-  <Link href="/publications" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">Publications</Link>
-  <Link href="/photo-video" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">Photo & Video</Link>
-  <Link href="/contact" className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">Contact</Link>
-</nav>
-
+    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
+      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 md:flex-row md:items-center md:justify-between">
+        <Link href="/" className="text-xl font-bold tracking-tight text-slate-950 dark:text-white">
+          Xuan Mei
+        </Link>
+        <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-slate-600 transition hover:text-blue-700 dark:text-slate-300 dark:hover:text-blue-300"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
       </div>
     </header>
   );
