@@ -18,10 +18,10 @@ export default function Hero() {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(460px,0.95fr)] xl:gap-20"
+        className="mx-auto grid max-w-7xl items-center gap-12 xl:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] xl:gap-16"
       >
-        <div>
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.08em] text-blue-700 dark:text-blue-300 sm:text-sm md:whitespace-nowrap lg:text-base">
+        <div className="min-w-0">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.06em] text-blue-700 dark:text-blue-300 sm:text-sm lg:text-base xl:whitespace-nowrap">
             Biomedical Engineering · Biofabrication · Translational Biomaterials
           </p>
           <h1 className="max-w-4xl text-5xl font-bold tracking-tight text-slate-950 dark:text-white md:text-7xl">
@@ -58,11 +58,11 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="w-full rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl dark:border-slate-800 dark:bg-slate-900 lg:p-10 xl:p-12">
+        <div className="w-full max-w-2xl justify-self-center rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl dark:border-slate-800 dark:bg-slate-900 lg:p-10 xl:justify-self-end xl:p-12">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
             Current focus
           </p>
-          <h2 className="mt-5 max-w-xl text-3xl font-bold leading-tight text-slate-950 dark:text-white lg:text-4xl">
+          <h2 className="mt-5 text-3xl font-bold leading-tight text-slate-950 dark:text-white lg:text-4xl">
             Engineering dynamic and clinically relevant tissue systems
           </h2>
           <ul className="mt-8 space-y-5 text-lg leading-8 text-slate-700 dark:text-slate-300">
