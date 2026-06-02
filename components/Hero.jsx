@@ -18,7 +18,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[1.2fr_0.8fr]"
+        className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(460px,0.95fr)] xl:gap-20"
       >
         <div>
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.08em] text-blue-700 dark:text-blue-300 sm:text-sm md:whitespace-nowrap lg:text-base">
@@ -58,14 +58,14 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl dark:border-slate-800 dark:bg-slate-900">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+        <div className="w-full rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl dark:border-slate-800 dark:bg-slate-900 lg:p-10 xl:p-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
             Current focus
           </p>
-          <h2 className="mt-4 text-2xl font-bold text-slate-950 dark:text-white">
+          <h2 className="mt-5 max-w-xl text-3xl font-bold leading-tight text-slate-950 dark:text-white lg:text-4xl">
             Engineering dynamic and clinically relevant tissue systems
           </h2>
-          <ul className="mt-6 space-y-4 text-slate-700 dark:text-slate-300">
+          <ul className="mt-8 space-y-5 text-lg leading-8 text-slate-700 dark:text-slate-300">
             <li>• Light-based and extrusion bioprinting for complex tissue architectures</li>
             <li>• Bioengineered organ models for disease modeling and drug screening</li>
             <li>• Biomaterial-enabled cell therapy and minimally invasive delivery systems</li>
