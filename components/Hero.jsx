@@ -18,7 +18,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="mx-auto grid max-w-7xl items-center gap-12 xl:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] xl:gap-16"
+        className="mx-auto grid max-w-7xl items-center gap-12 xl:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] xl:gap-14"
       >
         <div className="min-w-0">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.06em] text-blue-700 dark:text-blue-300 sm:text-sm lg:text-base xl:whitespace-nowrap">
@@ -58,14 +58,14 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="w-full max-w-2xl justify-self-center rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl dark:border-slate-800 dark:bg-slate-900 lg:p-10 xl:justify-self-end xl:p-12">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+        <div className="w-full max-w-xl justify-self-end rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-xl dark:border-slate-800 dark:bg-slate-900 lg:p-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 sm:text-sm">
             Current focus
           </p>
-          <h2 className="mt-5 text-3xl font-bold leading-tight text-slate-950 dark:text-white lg:text-4xl">
+          <h2 className="mt-4 text-2xl font-bold leading-tight text-slate-950 dark:text-white lg:text-3xl">
             Engineering dynamic and clinically relevant tissue systems
           </h2>
-          <ul className="mt-8 space-y-5 text-lg leading-8 text-slate-700 dark:text-slate-300">
+          <ul className="mt-6 space-y-4 text-base leading-7 text-slate-700 dark:text-slate-300">
             <li>• Light-based and extrusion bioprinting for complex tissue architectures</li>
             <li>• Bioengineered organ models for disease modeling and drug screening</li>
             <li>• Biomaterial-enabled cell therapy and minimally invasive delivery systems</li>
