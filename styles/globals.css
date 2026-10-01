@@ -56,7 +56,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid #0071e3; outline-offs
 .hero { text-align: center; background: var(--surface); padding: 60px 32px 48px; margin-bottom: 12px; }
 .hero-inner { max-width: 1120px; margin: 0 auto; }
 .hero-tagline { margin: 0 0 18px; color: var(--secondary); font-size: 15px; font-weight: 500; letter-spacing: .015em; line-height: 1.5; white-space: nowrap; }
-.hero h1 { font-size: clamp(60px, 7.5vw, 100px); line-height: 1.03; letter-spacing: -.065em; font-weight: 600; margin: 0; }
+.hero h1 { font-size: 54px; line-height: 1.03; letter-spacing: -.04em; font-weight: 600; margin: 0; }
 .hero-description { max-width: 780px; margin: 22px auto 0; font-size: 24px; line-height: 1.43; font-weight: 400; letter-spacing: -.6px; color: var(--secondary); }
 .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; border: 1px solid transparent; border-radius: 980px; padding: 11px 23px; font-size: 17px; line-height: 22px; font-weight: 400; letter-spacing: -.2px; transition: background .2s, color .2s, border-color .2s; }
@@ -93,6 +93,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid #0071e3; outline-offs
 .card-description, .identity-list { font-size: 17px; line-height: 1.6; color: var(--secondary); margin: 16px 0 0; }
 .identity-list { list-style: none; padding: 0; }
 .identity-list li + li { margin-top: 9px; }
+.about-page .page-title { font-size: 54px; letter-spacing: -.04em; }
 .about-page .page-description { max-width: 950px; }
 .career-section { margin-top: 28px; }
 .career-heading { font-size: 36px; line-height: 1.15; font-weight: 600; letter-spacing: -1.3px; margin: 0 0 14px; }
@@ -135,7 +136,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid #0071e3; outline-offs
   .header-inner { gap: 26px; }
   .primary-navigation { gap: 20px; }
   .hero { padding-top: 56px; }
-  .hero h1 { font-size: 78px; }
+  .hero h1, .about-page .page-title { font-size: 48px; }
   .hero-description { font-size: 23px; max-width: 700px; }
   .focus-inner { gap: 40px; }
   .focus-heading h2 { font-size: 39px; letter-spacing: -1.4px; }
@@ -164,7 +165,8 @@ button:focus-visible, a:focus-visible { outline: 3px solid #0071e3; outline-offs
   .primary-navigation a[aria-current='page']::after { display: none; }
   .hero { padding: 40px 24px 36px; }
   .hero-tagline { font-size: 13px; max-width: 360px; white-space: normal; margin: 0 auto 18px; line-height: 1.6; }
-  .hero h1 { font-size: clamp(45px, 9.8vw, 72px); line-height: 1.08; letter-spacing: -.055em; }
+  .hero h1 { font-size: 36px; line-height: 1.08; letter-spacing: -.035em; }
+  .about-page .page-title { font-size: 36px; letter-spacing: -.035em; }
   .hero-description { font-size: 20px; line-height: 1.48; letter-spacing: -.4px; margin-top: 18px; max-width: 510px; }
   .hero-actions { gap: 12px; margin-top: 22px; }
   .button { font-size: 15px; padding: 10px 20px; min-height: 44px; }
