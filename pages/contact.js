@@ -13,13 +13,13 @@ export default function Contact() {
         </p>
 
         <div className="detail-grid">
-          <a
-            href="mailto:mxajim@gmail.com"
-            className="detail-card"
-          >
+          <article className="detail-card">
             <p className="contact-label">Email</p>
-            <p className="contact-link">mxajim@gmail.com</p>
-          </a>
+            <div className="contact-email-links">
+              <a href="mailto:mxajim@gmail.com" className="contact-link">mxajim@gmail.com</a>
+              <a href="mailto:xmei2@bwh.harvard.edu" className="contact-link">xmei2@bwh.harvard.edu</a>
+            </div>
+          </article>
           <a
             href="https://www.linkedin.com/in/xuan-mei-9a099021b"
             target="_blank"
