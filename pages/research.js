@@ -19,26 +19,26 @@ const researchAreas = [
 
 export default function Research() {
   return (
-    <main className="min-h-screen bg-white px-4 py-16 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-      <section className="mx-auto max-w-6xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-700 dark:text-blue-300">
+    <main id="main-content" className="page-shell research-page">
+      <section className="content-width">
+        <p className="eyebrow">
           Research
         </p>
-        <h1 className="mt-3 max-w-4xl text-4xl font-bold tracking-tight text-slate-950 dark:text-white md:text-5xl">
+        <h1 className="page-title">
           Engineering human-relevant tissue systems through biofabrication and biomaterials
         </h1>
-        <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-700 dark:text-slate-300">
+        <p className="page-description">
           My research integrates cells, biomaterials, microengineering, and biomanufacturing to create functional tissue models and translational therapeutic technologies.
         </p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="detail-grid">
           {researchAreas.map((area) => (
             <article
               key={area.title}
-              className="rounded-2xl border border-slate-200 bg-slate-50 p-7 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+              className="detail-card"
             >
-              <h2 className="text-xl font-semibold text-slate-950 dark:text-white">{area.title}</h2>
-              <p className="mt-4 leading-7 text-slate-700 dark:text-slate-300">{area.text}</p>
+              <h2 className="card-title">{area.title}</h2>
+              <p className="card-description">{area.text}</p>
             </article>
           ))}
         </div>

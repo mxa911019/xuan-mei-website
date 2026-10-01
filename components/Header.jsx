@@ -1,4 +1,7 @@
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import ThemeToggle from './ThemeToggle';
 
 const navItems = [
   { href: '/', label: 'Home' },
@@ -10,24 +13,65 @@ const navItems = [
 ];
 
 export default function Header() {
+  const router = useRouter();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuButton = useRef(null);
+  const navigation = useRef(null);
+
+  useEffect(() => {
+    if (menuOpen) navigation.current?.querySelector('a')?.focus();
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const closeMenu = () => setMenuOpen(false);
+    router.events.on('routeChangeStart', closeMenu);
+    return () => router.events.off('routeChangeStart', closeMenu);
+  }, [router.events]);
+
+  useEffect(() => {
+    const onEscape = (event) => {
+      if (event.key === 'Escape' && menuOpen) {
+        setMenuOpen(false);
+        menuButton.current?.focus();
+      }
+    };
+    const onResize = () => {
+      if (window.innerWidth > 767) setMenuOpen(false);
+    };
+    window.addEventListener('keydown', onEscape);
+    window.addEventListener('resize', onResize);
+    return () => {
+      window.removeEventListener('keydown', onEscape);
+      window.removeEventListener('resize', onResize);
+    };
+  }, [menuOpen]);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 md:flex-row md:items-center md:justify-between">
-        <Link href="/" className="text-xl font-bold tracking-tight text-slate-950 dark:text-white">
-          Xuan Mei
-        </Link>
-        <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-slate-600 transition hover:text-blue-700 dark:text-slate-300 dark:hover:text-blue-300"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-      </div>
-    </header>
+    <>
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <header className={`site-header${menuOpen ? ' menu-open' : ''}`}>
+        <div className="header-inner">
+          <Link href="/" className="wordmark" onClick={() => setMenuOpen(false)}>Xuan Mei</Link>
+          <nav ref={navigation} id="primary-navigation" className="primary-navigation" aria-label="Main navigation">
+            {navItems.map((item) => (
+              <Link key={item.href} href={item.href}
+                aria-current={router.pathname === item.href ? 'page' : undefined}
+                onClick={() => setMenuOpen(false)}>
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="header-controls">
+            <ThemeToggle />
+            <button ref={menuButton} type="button" className="menu-toggle"
+              aria-expanded={menuOpen} aria-controls="primary-navigation"
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              onClick={() => setMenuOpen(!menuOpen)}>
+              <span /><span />
+            </button>
+          </div>
+        </div>
+      </header>
+    </>
   );
 }

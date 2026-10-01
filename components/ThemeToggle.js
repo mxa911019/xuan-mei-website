@@ -5,22 +5,25 @@ export default function ThemeToggle() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    if (localStorage.theme === 'dark') setDarkMode(true);
+    let savedTheme;
+    try { savedTheme = localStorage.getItem('theme'); } catch { /* Storage may be unavailable. */ }
+    const isDark = savedTheme === 'dark';
+    document.documentElement.classList.toggle('dark', isDark);
+    setDarkMode(isDark);
   }, []);
 
   const toggleTheme = () => {
-    document.documentElement.classList.toggle('dark');
-    localStorage.theme = darkMode ? 'light' : 'dark';
-    setDarkMode(!darkMode);
+    const nextDarkMode = !darkMode;
+    document.documentElement.classList.toggle('dark', nextDarkMode);
+    try { localStorage.setItem('theme', nextDarkMode ? 'dark' : 'light'); } catch { /* Appearance still works without storage. */ }
+    setDarkMode(nextDarkMode);
   };
 
   return (
-    <button onClick={toggleTheme} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-      {darkMode ? (
-        <SunIcon className="w-6 h-6" />
-      ) : (
-        <MoonIcon className="w-6 h-6" />
-      )}
+    <button type="button" onClick={toggleTheme} className="theme-toggle"
+      aria-label={darkMode ? 'Switch to light appearance' : 'Switch to dark appearance'}
+      title={darkMode ? 'Switch to light appearance' : 'Switch to dark appearance'}>
+      {darkMode ? <SunIcon aria-hidden="true" /> : <MoonIcon aria-hidden="true" />}
     </button>
   );
 }

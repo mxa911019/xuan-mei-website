@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 const updates = [
   {
     id: 1,
@@ -23,40 +21,22 @@ const updates = [
 
 export default function NewsUpdates() {
   return (
-    <section className="bg-white px-4 py-20 dark:bg-slate-900">
-      <div className="mx-auto max-w-6xl">
-        <div className="mb-12 max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-700 dark:text-blue-300">
-            Research overview
-          </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white md:text-4xl">
-            Building technologies at the interface of cells, materials, and manufacturing
-          </h2>
-          <p className="mt-4 text-lg leading-8 text-slate-700 dark:text-slate-300">
+    <section className="overview-section">
+      <div className="content-width">
+        <div className="section-intro">
+          <p className="eyebrow">Research overview</p>
+          <h2>Building technologies at the interface of cells, materials, and manufacturing</h2>
+          <p className="section-description">
             My work integrates biomaterials, microphysiological systems, and biofabrication to engineer controllable biological models and therapeutic platforms.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          {updates.map((item, index) => (
-            <motion.article
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-slate-800 dark:bg-slate-800/70"
-            >
-              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-blue-700 text-sm font-bold text-white">
-                {item.id}
-              </div>
-              <h3 className="text-xl font-semibold text-slate-950 dark:text-white">
-                {item.title}
-              </h3>
-              <p className="mt-3 leading-7 text-slate-700 dark:text-slate-300">
-                {item.description}
-              </p>
-            </motion.article>
+        <div className="overview-grid">
+          {updates.map((item) => (
+            <article key={item.id} className="overview-card">
+              <span className="card-number" aria-hidden="true">0{item.id}</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
           ))}
         </div>
       </div>
