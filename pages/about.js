@@ -60,8 +60,7 @@ export default function About() {
                 <div className="career-details">
                   <h3 className="career-title">{entry.role}</h3>
                   <p className="career-institution">
-                    {entry.institution}{' '}
-                    <span className="career-meta">Full-time</span>
+                    {entry.institution}
                   </p>
                 </div>
               </li>
